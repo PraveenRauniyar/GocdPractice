@@ -1,0 +1,83 @@
+body{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(179,101,62,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(179,101,62,1) 0%, rgba(0,0,0,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(179,101,62,1)), color-stop(100%, rgba(0,0,0,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(179,101,62,1) 0%, rgba(0,0,0,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(179,101,62,1) 0%, rgba(0,0,0,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(179,101,62,1) 0%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(179,101,62,1) 0%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3653e', endColorstr='#000000', GradientType=1)
+  font-weight: 400;
+  background-repeat: no-repeat;
+}
+
+h2{
+  font-weight: 500;
+}
+
+h1{
+  color: #C0C0C0;
+  font-weight: 500;
+  font-size: 70px;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 25px;
+  color: #FFC19A;
+}
+
+footer{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+
+#playerNames{
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  color: steelblue;
+}
+
+.loader {
+  padding: 10px;
+  align-content: center;
+  -webkit-align-content:center;
+  margin: auto;
+  border: 11px solid white;
+  border-radius: 50%;
+  border-top: 11px solid rgb(251, 140, 38);
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+div.container{
+  height: 850px;
+  width: auto;
+}
+
+.gameId{
+  font-size: 22px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.gameId span{
+  font-weight: 600;
+  padding: 10px;
+}

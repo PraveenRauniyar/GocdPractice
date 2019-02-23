@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<title>ACQUIRE</title>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Fontdiner Swanky' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/game.css">
+  <script src="/js/utility.js" charset="utf-8"></script>
+  <script src="/js/gamePageDisplay.js" charset="utf-8"></script>
+  <script src="/js/ajaxRequest.js" charset="utf-8"></script>
+  <script src="/js/gamePage.js" charset="utf-8"></script>
+  <script src="/js/actions.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div class="header">
+    <span class="heading">ACQUIRE</span>
+    <span id="playerName">
+    </div>
+    <div class="actionPane">
+      <div class='actions'>
+      </div>
+
+      <div id = 'currentActivity' class='currentActivity'>
+      </div>
+      <div id='turns'>
+      </div>
+    </span>
+  </div>
+  <div class="row">
+    <div class='leftcolumn'>
+      <div class="region" id="hotels-place">
+      </div>
+    </div>
+    <div class="centercolumn">
+      <div class="modal" id="rankListDisplay">
+        <div class="modal-content" id="rankListContent">
+        </div>
+      </div>
+      <div class="modal" id="inactiveHotelsFormDiv">
+        <div class="modal-content inactive-hotels-form" id="inactiveHotelsForm">
+
+        </div>
+      </div>
+      <div class="modal" id="choose-surv-hotel">
+        <div class="modal-content choose-surv-hotel" id="tieBreakForm">
+
+        </div>
+      </div>
+      <div class="modal" id="disposeShares">
+        <div class="modal-content dispose-shares-form" id="disposeSharesForm">
+          <h4>DISPOSE SHARES</h4>
+          <label id="hotelNameOfwhichSharesToDispose"></label><br>
+          <input type="number" pattern="\+d*" id="noOfSharesToSell" name="noOfSharesToSell" placeholder="To Sell" value="">
+          <input type="number"  pattern="\+d*" id="noOfSharesToExchange" name="noOfSharesToExchange" placeholder="To Exchange" value=""><br>
+          <button type="submit" name="button" onclick="promptDisposeShares()">DISPOSE</button>
+        </div>
+      </div>
+      <div class="modal" id="promptDisposeShares">
+        <div class="modal-content prompt-dispose-shares" id="promptDisposeShares">
+          <h4>Do you really want to dispose your share?</h4>
+          <button type="submit" name="button" onclick="requestdisposeShares()">YES</button>
+          <button type="submit" name="button" onclick="letPlayerDisposeShares()">NO</button>
+        </div>
+      </div>
+      <div class="modal" id="promptStartHotel">
+        <div class="modal-content prompt-start-hotel" id="promptStartHotel">
+          <h4>Do you really want to start <span class="selected-hotel-to-start" id="selectedHotelToStart">
+          </span>?</h4>
+          <button type="submit" name="button" onclick="chooseHotel()">YES</button>
+          <button type="submit" name="button" onclick="letPlayerChooseHotel()">NO</button>
+        </div>
+      </div>
+      <div class="modal" id="change-turn">
+        <div class="modal-content purchase-shares">
+          <h4>BUY SHARES</h4>
+          <div class="cart" id="cart"></div>
+          <div class="listed-hotels" id="listed-hotels"></div>
+          <button type="button" class="buyButton" id="buyButton">Buy</button>
+        </div>
+      </div>
+      <div id="centercolumn">
+        <div>
+          <div class='messageBar' id="messageBar">
+          </div>
+          <div id='board'  style="height:540px;width:720px;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div class="region activity-log">
+        <h2>Activity Log</h2>
+        <div class="logSpace" id="activity-log"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="shares" id="playerShares">
+    </div>
+    <div class="cash" id='wallet'></div>
+    <div class="tiles">
+      <div id='tileBox'>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
