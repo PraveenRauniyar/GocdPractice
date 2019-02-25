@@ -15,7 +15,7 @@ describe('OrderPlayers', () => {
         {name:'harshad',id:3,tiles:['1B']},
         {name:'sachin',id:4,tiles:['1A']}
       ];
-      let expectedOrder = [4,3,2,1];
+      let expectedOrder = [4,3,2,1,5];
       assert.deepEqual(orderPlayers(players),expectedOrder);
     });
     it('should return empty list for empty players list', () => {
