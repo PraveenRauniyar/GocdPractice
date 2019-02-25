@@ -21,7 +21,7 @@ describe('OrderPlayers', () => {
     it('should return empty list for empty players list', () => {
       let player = [];
       let expectedOrder = [];
-      assert.deepEqual(orderPlayers(player),expectedOrder);
+      assert.deepEqual(null,expectedOrder);
     });
   });
 });
